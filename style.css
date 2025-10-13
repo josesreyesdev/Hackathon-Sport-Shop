@@ -28,7 +28,25 @@ header.navbar {
 .nav-link.active {
     color: var(--verde) !important;
 }
+.btn-outline-light {
+    border-color: var(--verde);
+    color: var(--verde);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: 600;
+}
 
+.btn-outline-light:hover {
+    background-color: var(--verde);
+    border-color: var(--verde);
+    color: var(--negro); /* Texto negro sobre el fondo verde */
+}
+
+/* Estilo del contador del carrito (badge) */
+#cartCount {
+    /* El badge debe ser de tu color de acento o un color que contraste bien (ej. rojo para urgencia) */
+    background-color: #dc3545 !important; /* Rojo de Bootstrap */
+    border: 1px solid var(--dark-bg); /* Pequeño borde oscuro */
+}
 /* Estilos generales para el Hero */
 .hero-section {
     position: relative;
