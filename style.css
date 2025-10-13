@@ -1,0 +1,30 @@
+/* ===== PALETA ===== */
+:root {
+    --azul: #118AB2;
+    --verde: #06D6A0;
+    --negro: #202020;
+    --gris: #F0F4F8;
+}
+
+/* ===== HEADER ===== */
+header.navbar {
+    background-color: var(--negro);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar-brand {
+    color: var(--verde) !important;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: var(--gris) !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--verde) !important;
+}
