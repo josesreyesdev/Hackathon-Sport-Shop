@@ -1,3 +1,137 @@
+/* Estilos generales para el Hero */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Opcional: Altura de toda la ventana visible */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
+/* Fondo (Imagen) */
+.hero-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 90%;
+    z-index: 1; /* Coloca el fondo detrás del contenido */
+    transform: translate(-50%, -50%);
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+}
+
+/* Capa Oscura (Overlay) para asegurar que el texto blanco sea legible */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Negro con 40% de opacidad */
+}
+
+/* Contenido (Texto y Botón) */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Coloca el contenido sobre el fondo */
+    color: white; /* Color de texto para que contraste con el fondo oscuro */
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 3.5em; /* Tamaño grande para el título principal */
+    margin-bottom: 0.5em;
+    font-weight: 700; /* Tipografía muy audaz, ideal para deporte */
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 2em;
+    font-weight: 300;
+}
+
+/* Botón CTA (Llamada a la Acción) */
+.hero-cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #118AB2; /* NARANJA VIBRANTE de baloncesto */
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.hero-cta-button:hover {
+    background-color: #06D6A0; /* Cambio de color cuando pasas el mouse*/
+}
+
+/* Estilos para que sea responsivo*/
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+}
+
+.hero-title {
+    /* ... estilos existentes ... */
+    opacity: 0; /* Empieza invisible */
+    animation: fadeInSlide 0.8s ease-out forwards; /* Aplica animación al título */
+    animation-delay: 0.2s; /* Retrasa un poco el inicio */
+}
+
+.hero-subtitle {
+    /* ... estilos existentes ... */
+    opacity: 0; /* Empieza invisible */
+    animation: fadeInSlide 0.8s ease-out forwards; /* Aplica animación al subtítulo */
+    animation-delay: 0.5s; /* Retrasa más para que aparezca después del título */
+}
+
+.hero-cta-button {
+    /* ... estilos existentes ... */
+    opacity: 0; /* Empieza invisible */
+    animation: fadeInSlide 2s ease-out forwards; /* Aplica animación al botón */
+    animation-delay: 0.8s; /* Retrasa más para ser el último en aparecer */
+}
+
+/* 1. Definición de la animación de entrada */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Empieza 20px más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body { /*Estilo para el body / fondo de la página*/
+    /* Color de fondo */
+    background-color: #F0F4F8;   
+    /* Asegúrate de que no haya márgenes no deseados */
+    margin: 0;
+    padding: 0;
+}
 :root {
      --color1: #118AB2
 #06D6A0
