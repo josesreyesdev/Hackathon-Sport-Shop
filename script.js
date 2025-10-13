@@ -7,7 +7,7 @@ const cart = [];
  */
 function showToast(toastId, message) {
     const toastElement = document.getElementById(toastId);
-/* verifica que exista un elemento toastElement */
+    /* verifica que exista un elemento toastElement */
     if (toastElement) {
         const toastBody = document.getElementById('toast-text-product');
         if (toastBody) {
@@ -21,4 +21,30 @@ function showToast(toastId, message) {
 function addToCart(item) {
     cart.push(item);
     showToast('productAddedToast', '¡' + item + ' añadido con éxito al carrito!');
+}
+//alerta para suscribirse
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+    ].join('')
+
+    alertPlaceholder.innerHTML = '';
+    alertPlaceholder.append(wrapper);
+}
+
+const newsletterForm = document.getElementById('training-newsletter-form');
+const emailInput = document.getElementById('training-email-subscribe');
+// Verificacion para poder enviar el correo una vez que si haya correo 
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        
+        e.preventDefault(); 
+        appendAlert('¡Genial! Ahora eres parte de la Élite. Revisa tu correo.', 'success');
+        emailInput.value = '';
+    });
 }
