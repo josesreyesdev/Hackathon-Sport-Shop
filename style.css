@@ -471,6 +471,68 @@ body {
     color: #F0F4F8;
 }
 
+/* Estilos para la sección de Entrenamiento y Potencial */
+#training {
+    background-color: var(--negro);
+    /* Fondo oscuro principal */
+    color: var(--gris);
+}
+
+#training h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--verde);
+    /* Título en color de acento */
+    text-transform: uppercase;
+}
+
+#training h4.card-title {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+#training .card-text {
+    color: #b0b0b0;
+}
+
+/* Estilos para la sección de Entrenamiento y Potencial (ya estaban) */
+#training {
+    background-color: var(--negro);
+    color: var(--gris);
+}
+
+/* ... otros estilos de #training ... */
+
+/* Nuevo estilo para la caja del Newsletter dentro de la sección de entrenamiento */
+.newsletter-box {
+    background-color: #333333;
+    /* Un gris oscuro para destacar el recuadro */
+    border-radius: 8px;
+    max-width: 550px;
+    /* Ancho máximo para que no ocupe toda la pantalla */
+    margin-left: auto;
+    margin-right: auto;
+    /* Usar la paleta de colores del hero para el input */
+    border: 1px solid var(--azul);
+}
+
+.newsletter-box h4 {
+    color: var(--gris);
+    font-weight: 600;
+}
+
+/* Estilo del botón 'Únete' */
+#btn-newsletter-submit {
+    background-color: var(--verde);
+    /* Verde/Menta para el acento */
+    color: var(--negro);
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+#btn-newsletter-submit:hover {
+    background-color: #118AB2;
+}
 /* Estilos para la sección de contacto */
 .contact-section {
     background-color: var(--negro);
