@@ -1,0 +1,90 @@
+/* footer.css */
+
+:root {
+  /* === PALETA DE COLORES === */
+  --color-primario: #06D6A0;       /* Verde brillante (color principal de acentos) */
+  --color-secundario: #333333;     /* Gris oscuro (para textos secundarios) */
+  --color-fondo: #118AB2;          /* Fondo azul (base) */
+  --color-texto: #FFFFFF;          /* Texto blanco (para contraste sobre el azul) */
+  --color-terciario: #B0BEC5;      /* Gris claro para detalles menores */
+  --color-enlace: #F0F4F8;         /* Enlaces en blanco suave */
+  --color-enlace-hover: #06D6A0;   /* Hover en verde brillante */
+
+  /* Tipografías */
+  --fuente-principal: 'Chakra Petch', sans-serif;
+  --fuente-secundaria: 'Roboto', sans-serif;
+}
+
+
+
+/* Estilo del footer */
+.footer {
+  background-color: var(--color-fondo);
+  padding: 40px 0;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+}
+
+.footer-logo h2 {
+  color: var(--color-primario);
+  font-family: var(--fuente-secundaria);
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: var(--color-enlace);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: var(--color-secundario);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  color: var(--color-primario);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--color-secundario);
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--color-terciario);
+}
+
+/* Estilo de responsividad */
+@media (max-width: 768px) {
+  .footer .row {
+    text-align: center;
+  }
+  .footer-logo h2 {
+    font-size: 24px;
+  }
+  .footer-links {
+    margin-top: 20px;
+  }
+  .social-icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+
