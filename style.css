@@ -68,7 +68,6 @@ header.navbar {
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 90%;
     z-index: 1;
     /* Coloca el fondo detrás del contenido */
     transform: translate(-50%, -50%);
@@ -127,7 +126,7 @@ header.navbar {
     display: inline-block;
     padding: 15px 30px;
     background-color: #118AB2;
-    /* NARANJA VIBRANTE de baloncesto */
+    /* Azul de baloncesto */
     color: white;
     font-family: 'Chakra Petch', sans-serif;
     text-decoration: none;
@@ -207,6 +206,166 @@ body {
     padding: 0;
 }
 
+/* Sección General del Carrusel */
+/* ======== CARRUSEL ======== */
+
+/* Sección General */
+.carousel-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #222;
+}
+
+.carousel-section h2 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 3.2em;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    background: black;
+}
+
+/* Pista de slides */
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Cada slide individual */
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.carousel-slide img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+.slide-info {
+    width: 40%;
+    padding: 40px;
+    text-align: left;
+}
+
+.slide-info h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.slide-info p {
+    font-family: 'chakra petch', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.slide-cta {
+    font-family: 'chakra petch', sans-serif;
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #118AB2;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.slide-cta:hover {
+    background-color: #118AB2;
+}
+
+/* Flechas */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.8em;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev {
+    left: 15px;
+}
+
+.carousel-next {
+    right: 15px;
+}
+
+/* Puntos indicadores */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.carousel-dots button {
+    font-family: 'chakra petch', sans-serif;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #bbb;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-dots button.active {
+    background: #118AB2;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+.carousel-slide {
+    flex-direction: column;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.slide-info {
+    width: 100%;
+    text-align: center;
+}
+}
 
 /* El botón CTA: lo más importante, usaremos el color de acento (#06D6A0) */
 .btn-carrito {
