@@ -179,11 +179,10 @@ header.navbar {
     }
 }
 
-
 body {
     /*Estilo para el body / fondo de la página*/
     /* Color de fondo */
-    background-color: #F0F4F8;
+    background-color: var(--negro);
     /* Asegúrate de que no haya márgenes no deseados */
     margin: 0;
     padding: 0;
@@ -231,7 +230,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: --;
 }
 
 .carousel-slide img {
@@ -348,4 +347,108 @@ body {
     width: 100%;
     text-align: center;
 }
+}
+
+/* El botón CTA: lo más importante, usaremos el color de acento (#06D6A0) */
+.btn-carrito {
+    background-color: #06D6A0;
+    /* Verde/Menta vibrante para el CTA */
+    color: #202020;
+    /* Texto oscuro para asegurar contraste en el CTA */
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(6, 214, 160, 0.4);
+    /* Sombra para resaltar */
+}
+
+.btn-carrito:hover {
+    background-color: #118AB2;
+    /* Nuevo color azul en el hover */
+    color: #F0F4F8;
+    /* Texto claro en el hover */
+    box-shadow: 0 4px 15px rgba(17, 138, 178, 0.4);
+}
+
+.card {
+    /* Un fondo un poco más claro que el body para diferenciar las tarjetas */
+    background-color: #333333;
+    color: #F0F4F8;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    /* Transición suave para el hover */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Pequeño levantamiento al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para los indicadores del carrusel (los puntos) */
+.carousel-indicators {
+    /* Mueve los indicadores 40px hacia abajo desde su posición original (bottom: 0) */
+    /* Ajusta este valor (40px) para subirlo o bajarlo más */
+    bottom: -50px;
+
+    /* Opcional: Esto ayuda a que el fondo oscuro no interfiera */
+    padding-bottom: 20px;
+}
+
+#shop h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    /* Peso audaz */
+    color: #F0F4F8;
+    /* Color de texto blanco suave */
+    text-transform: uppercase;
+}
+
+/* Ajustar el espacio inferior de la sección para compensar */
+#shop>.container {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.carousel-control-prev {
+    /* Mueve la flecha de la izquierda hacia afuera del contenedor */
+    left: -90px;
+    /* Ajusta este valor (-50px) para moverlo más o menos a la izquierda */
+
+    /* Asegura el centrado vertical */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next {
+    /* Mueve la flecha de la derecha hacia afuera del contenedor */
+    right: -90px;
+    /* Ajusta este valor (-50px) para moverlo más o menos a la derecha */
+
+    /* Asegura el centrado vertical */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toast-header {
+    background-color: #333333;
+    /* Color oscuro similar al de tus tarjetas */
+    color: #F0F4F8;
+    /* Color de texto claro */
+    border-bottom: 1px solid #118AB2;
+    /* Línea de acento azul */
+}
+
+/* Color para el nombre de la marca en el encabezado del toast */
+.toast-header .text-primary {
+    color: #118AB2 !important;
+    /* El color de tu marca */
+    font-weight: 700;
+}
+
+/* Estilo para el cuerpo del toast */
+.toast-body {
+    background-color: #202020;
+    /* Color de fondo principal */
+    color: #F0F4F8;
 }
