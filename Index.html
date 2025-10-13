@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketball Peak Performance</title>
+    <title>GENERATION SPORT MX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto:wght@400;500&family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 
-    <!-- FontAwesome para los íconos de redes sociales -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -54,7 +55,130 @@
         </a>
     </div>
 </section>
-    <!-- footer.html -->
+   
+
+
+<!-- Seccion para una mini tienda de los elementos mas vendidos en Generation SPORT MX -->
+    <section id="shop" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Lo Más Vendido</h2>
+            <!-- Bootstrap carrusel -->
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- añadimos tarjetas en el carrusel para mostrar los productos con la opcion de añadirlos al carrito  -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center align-items-stretch">
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card p-4 h-100 d-flex flex-column">
+                                    <img src="./Images/Balon Official.webp" class="card-img-top mb-3"
+                                        alt="Balón Oficial NBA 2025">
+                                    <h5 class="mt-2">Balón Oficial</h5>
+                                    <p>Balón oficial NBA 2025.</p>
+                                    <button class="btn btn-carrito mt-auto"
+                                        onclick="addToCart('Balón Oficial')">Agregar al carrito</button>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card p-4 h-100 d-flex flex-column">
+                                    <img src="./Images/Game Lebron.avif" class="card-img-top mb-3"
+                                        alt="Zapato NBA Signature Game Lebron XXII">
+                                    <h5 class="mt-2">Game Lebron XXII</h5>
+                                    <p>Zapato NBA Signature Game Lebron XXII</p>
+                                    <button class="btn btn-carrito mt-auto"
+                                        onclick="addToCart('Game Lebron XXII')">Agregar al carrito</button>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 d-none d-lg-block">
+                                <div class="card p-4 h-100 d-flex flex-column">
+                                    <img src="./Images/roadman camiseta.avif" class="card-img-top mb-3"
+                                        alt="Camiseta Hardwood Classics de Dennis Rodman de los Chicago Bulls">
+                                    <h5 class="mt-2">Camiseta Hardwood Classics</h5>
+                                    <p>Camiseta Hardwood Classics de Dennis Rodman de los Chicago Bulls</p>
+                                    <button class="btn btn-carrito mt-auto"
+                                        onclick="addToCart('Camiseta Hardwood')">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center align-items-stretch">
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card p-4 h-100 d-flex flex-column">
+                                    <img src="./Images/medias NBA.avif" class="card-img-top mb-3"
+                                        alt="Medias Logoman del NBA">
+                                    <h5 class="mt-2">Medias</h5>
+                                    <p>Medias Logoman del NBA</p>
+                                    <button class="btn btn-carrito mt-auto"
+                                        onclick="addToCart('Medias Logoman')">Agregar al carrito</button>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card p-4 h-100 d-flex flex-column">
+                                    <img src="./Images/Mochila Bulls.jpg" class="card-img-top mb-3"
+                                        alt="Mochila Brasilla 2.0 Nike de la NBA de los Chicago Bulls - Juvenil">
+                                    <h5 class="mt-2">Mochila Brasilla</h5>
+                                    <p>Mochila Brasilla 2.0 Nike de la NBA de los Chicago Bulls</p>
+                                    <button class="btn btn-carrito mt-auto"
+                                        onclick="addToCart('Mochila Chicago Bulls')">Agregar al carrito</button>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 d-none d-lg-block">
+                                <div class="card p-4 h-100 d-flex flex-column">
+                                    <img src="./Images/lakers.avif" class="card-img-top mb-3"
+                                        alt="Camiseta Nike Icon Swingman de Los Angeles Lakers - Luka Doncic">
+                                    <h5 class="mt-2">Camiseta Nike Icon Swingman</h5>
+                                    <p>Camiseta Nike Icon Swingman de Los Angeles Lakers - Luka Doncic</p>
+                                    <button class="btn btn-carrito mt-auto"
+                                        onclick="addToCart('Nike Icon Los Angeles Lakers')">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- botones de control de carrusel  -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- toast para mostrar alertas al hacer click en el boton añadir al carro  -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+        <div id="productAddedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+
+            <div class="toast-header">
+                <img src="./Images/basketball-ball-sport-free-vector-Photoroom.png" class="rounded me-2" alt="Logo" style="width: 20px; height: 20px; object-fit: cover;">
+                <strong class="me-auto text-primary">PEAK PERFORMANCE</strong>
+                <small>Justo ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="toast-body" id="toast-text-product">
+                Producto añadido con éxito.
+            </div>
+        </div>
+    </div>
+     <!-- footer.html -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -90,10 +214,12 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+
 
 </body>
 
